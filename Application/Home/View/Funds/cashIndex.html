@@ -1,0 +1,18 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/ERP/Funds/CashMainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("ERP.App", {
+            userName: "{$loginUserName}"
+        });
+
+        app.add(Ext.create("ERP.Funds.CashMainForm"));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid2024"
+            });
+    });
+</script>

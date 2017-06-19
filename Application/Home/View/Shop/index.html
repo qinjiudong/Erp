@@ -1,0 +1,27 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/ERP/Shop/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Shop/GoodsEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Shop/ShopEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Shop/ShopEditor.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Shop/WarehouseEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Shop/CategoryEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Shop/Categoryfield.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Shop/Categoryfield_1.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Shop/UserField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Warehouse/WarehouseField.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script src="{$uri}Public/Scripts/ERP/Goods/GoodsField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("ERP.App", {
+            userName: "{$loginUserName}"
+        });
+
+        app.add(Ext.create("ERP.Shop.MainForm"));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "ERP-fid1004"
+            });
+    });
+</script>

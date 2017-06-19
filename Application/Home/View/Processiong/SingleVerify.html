@@ -1,0 +1,26 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/ERP/Warehouse/WarehouseField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/User/UserField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Supplier/SupplierField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Goods/GoodsField.js?dt={$dtFlag}" type="text/javascript"></script>
+
+
+<script src="{$uri}Public/Scripts/ERP/Processiong/PCMainFormVerify.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Processiong/PCEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script src="{$uri}Public/Scripts/ERP/UX/CellEditing.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("ERP.App", {
+            userName: "{$loginUserName}"
+        });
+
+        app.add(Ext.create("ERP.Purchase.PCMainFormVerify"));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "ERP-fid2001"
+            });
+    });
+</script>

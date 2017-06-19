@@ -1,0 +1,20 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/ERP/Permission/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Permission/EditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Permission/SelectPermissionForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Permission/SelectUserForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("ERP.App", {
+            userName: "{$loginUserName}"
+        });
+
+        app.add(Ext.create("ERP.Permission.MainForm"));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "ERP-fid-8996"
+            });
+    });
+</script>

@@ -1,0 +1,21 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/ERP/Home/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("ERP.App", {
+            userName: "{$loginUserName}"
+        });
+
+        app.add(Ext.create("ERP.Home.MainForm",{
+            pSale: "1",
+            pInventory: "1",
+            pPurchase: "1",
+            pMoney: "1"
+        }));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "ERP-fid-9997"
+        });
+    });
+</script>

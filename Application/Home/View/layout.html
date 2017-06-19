@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{$title} - 生鲜电商ERP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{$uri}Public/Images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script src="{$uri}Public/ExtJS/ext-all.js" type="text/javascript"></script>
+        <script src="{$uri}Public/ExtJS/ext-lang-zh_CN.js" type="text/javascript"></script>
+        <script src="{$uri}Public/Scripts/ERP/MsgBox.js?dt={$dtFlag}" type="text/javascript"></script>
+        <script src="{$uri}Public/Scripts/ERP/Const.js?dt={$dtFlag}" type="text/javascript"></script>
+        <script src="{$uri}Public/Scripts/ERP/About/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+        <link href="{$uri}Public/ExtJS/resources/css/ext-all.css" rel="stylesheet" type="text/css"/>
+        <link href="{$uri}Public/Content/Site.css" rel="stylesheet" type="text/css"/>
+        <link href="{$uri}Public/Content/icons.css" rel="stylesheet" type="text/css"/>
+
+        <script src="{$uri}Public/Scripts/ERP/App.js?dt={$dtFlag}" type="text/javascript"></script>
+
+
+</head>
+    <body>
+    <script>
+        ERP.Const.BASE_URL = "{$uri}";    
+    </script>
+        
+        {__CONTENT__}
+    </body>
+</html>

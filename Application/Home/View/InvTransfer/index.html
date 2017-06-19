@@ -1,0 +1,25 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/ERP/InvTransfer/InvTransferMainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/InvTransfer/ITEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script src="{$uri}Public/Scripts/ERP/Warehouse/WarehouseField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/User/UserField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Goods/GoodsField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/InvTransfer/UplodeForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script src="{$uri}Public/Scripts/ERP/UX/CellEditing.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("ERP.App", {
+            userName: "{$loginUserName}"
+        });
+
+        app.add(Ext.create("ERP.InvTransfer.InvTransferMainForm"));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "ERP-fid2009"
+            });
+    });
+</script>

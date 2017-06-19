@@ -1,0 +1,25 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/ERP/User/UserFieldNew.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script src="{$uri}Public/Scripts/ERP/Customer/CustomerFieldNew.js?dt={$dtFlag}" type="text/javascript"></script>
+
+
+<script src="{$uri}Public/Scripts/ERP/Funds/PreReceivingMainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Funds/AddPreReceivingForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Funds/ReturnPreReceivingForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("ERP.App", {
+            userName: "{$loginUserName}"
+        });
+
+        app.add(Ext.create("ERP.Funds.PreReceivingMainForm"));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "ERP-fid2025"
+            });
+    });
+</script>

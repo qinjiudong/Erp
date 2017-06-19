@@ -1,0 +1,17 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/ERP/Report/SaleReportByGoodsForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("ERP.App", {
+            userName: "{$loginUserName}"
+        });
+
+        app.add(Ext.create("PSI.Report.SaleReportByGoodsForm"));
+
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid2016"
+            });
+    });
+</script>

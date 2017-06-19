@@ -1,0 +1,17 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/ERP/Inventory/InvQueryMainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("ERP.App", {
+            userName: "{$loginUserName}"
+        });
+
+        app.add(Ext.create("ERP.Inventory.InvQueryMainForm"));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "ERP-fid2003"
+            });
+    });
+</script>

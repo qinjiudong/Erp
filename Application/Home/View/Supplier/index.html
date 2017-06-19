@@ -1,0 +1,19 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/ERP/Supplier/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Supplier/CategoryEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Supplier/SupplierEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("ERP.App", {
+            userName: "{$loginUserName}"
+        });
+
+        app.add(Ext.create("ERP.Supplier.MainForm"));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "ERP-fid1004"
+            });
+    });
+</script>

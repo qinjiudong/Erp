@@ -1,0 +1,20 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/ERP/Site/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Site/CategoryEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Site/LineEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Site/SiteEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("ERP.App", {
+            userName: "{$loginUserName}"
+        });
+
+        app.add(Ext.create("ERP.Site.MainForm"));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "ERP-fid1004"
+            });
+    });
+</script>

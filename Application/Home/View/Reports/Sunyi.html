@@ -1,0 +1,17 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/ERP/Report/SunyiForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("ERP.App", {
+            userName: "{$loginUserName}"
+        });
+
+        app.add(Ext.create("ERP.Report.SunyiForm"));
+
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid2016"
+            });
+    });
+</script>

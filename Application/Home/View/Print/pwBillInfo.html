@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
+<table border=0 width="100%" style="text-align:center">
+	<tr>
+		<td colspan=2><h3 style='text-align:center'>采购订单-{$info.ref}</h3></td>
+	</tr>
+	<tr>
+		<td width="50%">订单号:{$info.ref}</td>
+		<td width="50%">仓库:{$info.warehouseName}</td>
+	</tr>
+	<tr>
+		<td width="50%">人员:{$info.bizUserName}</td>
+		<td width="50%">日期:{$info.bizDT}</td>
+	</tr>
+	<tr>
+		<td width="50%">供应商:{$info.supplierName}</td>
+		<td width="50%"></td>
+	</tr>
+</table>
+
+<table border="1" width="100%" cellspacing=0>
+	<tr>
+		<th width="50">序号</th>
+		<th width="100">商品编码</th>
+		<th width="200">商品名称</th>
+		<th width="60">规格</th>
+		<th width="50">数量</th>
+		<th width="50">单位</th>
+		<th width="100">单价</th>
+		<th width="150">合计</th>
+		<th width="">备注</th>
+	</tr>
+	<volist name="info.items" id="item" >
+		<tr style='text-align:center'>
+			<td width="">{$item.no}</td>
+			<td width="">{$item.goodsCode}</td>
+			<td width="">{$item.goodsName}</td>
+			<td width="">{$item.goodsSpec}</td>
+			<td width="">{$item.unitName}</td>
+			<td width="">{$item.goodsCount}</td>
+			<td width="">{$item.goodsPrice}</td>
+			<td width="">{$item.goodsMoney}</td>
+			<td width="">{$item.beizhu}</td>
+		</tr>
+	</volist>
+	<tr>
+			<th width="">总计</th>
+			<th width=""></th>
+			<th width=""></th>
+			<th width=""></th>
+			<th width=""></th>
+			<th width=""></th>
+			<th width=""></th>
+			<th width="">{$info.goodsMoney}</th>
+			<th width=""></th>
+	</tr>
+</table>
+
+</body>
+</html>

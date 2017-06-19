@@ -1,0 +1,30 @@
+<layout name="layout" />
+
+<if condition="$warehouseUsesOrg eq true">
+<script src="{$uri}Public/Scripts/ERP/Warehouse/MainFormWithOrg.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Warehouse/EditOrgForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/Warehouse/OrgViewForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<else />
+<script src="{$uri}Public/Scripts/ERP/Warehouse/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+</if>
+<script src="{$uri}Public/Scripts/ERP/Warehouse/EditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("ERP.App", {
+            userName: "{$loginUserName}"
+        });
+
+        
+        <if condition="$warehouseUsesOrg eq true">
+        	app.add(Ext.create("ERP.Warehouse.MainFormWithOrg"));
+        <else />
+        	app.add(Ext.create("ERP.Warehouse.MainForm"));
+        </if>
+
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "ERP-fid1003"
+            });
+    });
+</script>

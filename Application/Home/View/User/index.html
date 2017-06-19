@@ -1,0 +1,24 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/ERP/User/ParentOrgEditor.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/User/OrgEditor.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script src="{$uri}Public/Scripts/ERP/User/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/User/OrgEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/User/UserEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/ERP/User/ChangeUserPasswordForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("ERP.App", {
+            userName: "{$loginUserName}"
+        });
+        
+        app.add(Ext.create("ERP.User.MainForm"));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "ERP-fid-8999"
+            });
+
+    });
+</script>
